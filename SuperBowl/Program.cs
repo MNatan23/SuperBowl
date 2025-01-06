@@ -11,7 +11,23 @@
             {
                 döntők.Add(new Döntő(sor));
             }
-            Console.WriteLine($"4.feladat: Döntők száma:"{ döntők.Count}");
+            //4.
+            Console.WriteLine($"4.feladat: Döntők száma:{ döntők.Count}");
+
+
+            //5.
+            int pontkülömbség = 0;
+            foreach (var d in döntők)
+
+            {
+                string[] e = d.Eredmény.Split('-');
+                pontkülömbség += Math.Abs(int.Parse(e[0]) - int.Parse(e[1]));
+
+                double átlag = pontkülömbség / döntők.Count;
+                Console.WriteLine($"5.feladat: Átlagos pontkülömbség: {átlag:0.0}");
+            }
         }
+
+
     }
 }
